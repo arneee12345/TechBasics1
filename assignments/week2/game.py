@@ -106,6 +106,7 @@ time.sleep(1)
 # Number input using while loop
 print("\n🎤 Rate your own coaching performance today (1 to 10):")
 
+
 while True:
     rating = input("Enter a number from 1 to 10: ")
     if rating.isdigit():
@@ -131,4 +132,3 @@ time.sleep(1)
 print("\n🎮 Game Over!")
 print("📊 Final Result:", result.upper())
 print("Thanks for playing,", coach_name, "!")
-
