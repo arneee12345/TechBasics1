@@ -5,22 +5,25 @@ TYPING_DELAY = 0.05
 SHORT_DELAY = 1
 LONG_DELAY = 2
 
+
 # Helping functions (modularizing)
 
-def type_effect(text): # Prints text with typing effect
+def type_effect(text):  # Prints text with typing effect
     for char in text:
         print(char, end='', flush=True)
         time.sleep(TYPING_DELAY)
     print()
 
-def get_input(prompt, valid_options): # Asks for input and checks if it's in valid options
+
+def get_input(prompt, valid_options):  # Asks for input and checks if it's in valid options
     choice = input(prompt)
     if choice not in valid_options:
         print("🤷 Invalid input, using default.")
         return valid_options[0]
     return choice
 
-def choose_formation(): # asks for input to choose formation and prints fitting answer
+
+def choose_formation():  # asks for input to choose formation and prints fitting answer
     print("Choose your formation:")
     print("1 - 4-4-2 (Balanced)")
     print("2 - 3-4-3 (Offensive)")
@@ -35,7 +38,8 @@ def choose_formation(): # asks for input to choose formation and prints fitting 
     time.sleep(SHORT_DELAY)
     return choice
 
-def player_decision(): # asks for input and prints fitting answer
+
+def player_decision():  # asks for input and prints fitting answer
     print("\n🌟 A young talented player wants to start in today's big game.")
     print("Do you let him play from the start?")
     print("1 - Yes")
@@ -47,7 +51,8 @@ def player_decision(): # asks for input and prints fitting answer
         print("👴 You chose experience over talent. Let's see how it plays out!")
     return choice
 
-def penalty_scene(young_player_choice): # asks for input and prints fitting answer
+
+def penalty_scene(young_player_choice):  # asks for input and prints fitting answer
     print("\n⏱️ It's the 89th minute. Your team gets a penalty kick! The score is 2-2.")
     print("Who takes the shot?")
     print("1 - The experienced team captain")
@@ -74,7 +79,8 @@ def penalty_scene(young_player_choice): # asks for input and prints fitting answ
             print("😬 He wasn’t fully ready... the shot goes way off. It's a draw.")
             return "draw"
 
-def training_decision(): # asks for input and prints fitting answer
+
+def training_decision():  # asks for input and prints fitting answer
     print("\n⚽️ What is the focus of the upcoming training sessions?")
     print("1 - Defense")
     print("2 - Attack")
@@ -84,7 +90,8 @@ def training_decision(): # asks for input and prints fitting answer
     elif choice == "2":
         print("🔥 Your strikers are eager to improve their performance!")
 
-def rate_performance(coach_name): # ask for input and print fitting answer
+
+def rate_performance(coach_name):  # ask for input and print fitting answer
     print("\n🎤 Rate your own coaching performance today (1 to 10):")
     while True:
         rating = input("Enter a number from 1 to 10: ")
@@ -100,6 +107,7 @@ def rate_performance(coach_name): # ask for input and print fitting answer
         print("👍 Decent effort. Room for improvement.")
     else:
         print("😬 Tough day. Better luck next match!")
+
 
 # main function
 
@@ -126,7 +134,7 @@ def main():
     print("📊 Final Result:", result.upper())
     print(f"Thanks for playing, {coach_name}!")
 
+
 # Entry Point
 if __name__ == "__main__":
     main()
-
